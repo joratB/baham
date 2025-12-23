@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="refresh" content="0; url=https://gamex.lol/d">
+    <title>در حال انتقال | لینک شما</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        
+        .container {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 40px;
+            max-width: 500px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .loader {
+            width: 50px;
+            height: 50px;
+            border: 4px solid rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+            border-top-color: white;
+            margin: 20px auto;
+            animation: spin 1s linear infinite;
+        }
+        
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+        
+        h1 {
+            font-size: 28px;
+            margin-bottom: 15px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        
+        p {
+            font-size: 18px;
+            margin-bottom: 25px;
+            opacity: 0.9;
+        }
+        
+        .btn {
+            display: inline-block;
+            background: white;
+            color: #667eea;
+            padding: 12px 30px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 20px;
+            transition: transform 0.3s, box-shadow 0.3s;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+        
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🔗 در حال انتقال شما...</h1>
+        <div class="loader"></div>
+        <p>لطفاً چند لحظه صبر کنید. در حال انتقال به سایت مورد نظر هستید.</p>
+        <p>اگر بعد از ۵ ثانیه منتقل نشدید، روی دکمه زیر کلیک کنید:</p>
+        <a href="https://gamex.lol/d" class="btn" id="manual-link">
+            🚀 برو به سایت اصلی
+        </a>
+        
+        <div style="margin-top: 30px; font-size: 14px; opacity: 0.7;">
+            <p>🔒 این یک لینک امن است</p>
+        </div>
+    </div>
+
+    <script>
+        // رندوم کردن زمان ریدایرکت برای جلوگیری از تشخیص
+        setTimeout(() => {
+            window.location.href = "https://gamex.lol/d";
+        }, 300 + Math.random() * 700);
+        
+        // اگر کاربر روی دکمه کلیک کرد، ریدایرکت رو متوقف کن
+        document.getElementById('manual-link').addEventListener('click', function(e) {
+            e.preventDefault();
+            clearTimeout(window.redirectTimer);
+            window.location.href = this.href;
+        });
+        
+        // همچنین ریدایرکت با کلید انتر
+        document.addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                window.location.href = "https://gamex.lol/d";
+            }
+        });
+    </script>
+</body>
+</html>
