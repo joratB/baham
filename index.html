@@ -1,118 +1,153 @@
 <!DOCTYPE html>
-<html lang="fa">
+<html lang="fa" dir="rtl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="refresh" content="0; url=https://jorat.xyz">
-    <title>در حال انتقال | لینک شما</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            color: white;
-            text-align: center;
-            padding: 20px;
-        }
-        
-        .container {
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(10px);
-            border-radius: 20px;
-            padding: 40px;
-            max-width: 500px;
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-        }
-        
-        .loader {
-            width: 50px;
-            height: 50px;
-            border: 4px solid rgba(255, 255, 255, 0.3);
-            border-radius: 50%;
-            border-top-color: white;
-            margin: 20px auto;
-            animation: spin 1s linear infinite;
-        }
-        
-        @keyframes spin {
-            to { transform: rotate(360deg); }
-        }
-        
-        h1 {
-            font-size: 28px;
-            margin-bottom: 15px;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-        }
-        
-        p {
-            font-size: 18px;
-            margin-bottom: 25px;
-            opacity: 0.9;
-        }
-        
-        .btn {
-            display: inline-block;
-            background: white;
-            color: #667eea;
-            padding: 12px 30px;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: bold;
-            margin-top: 20px;
-            transition: transform 0.3s, box-shadow 0.3s;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-        }
-        
-        .btn:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
-        }
-    </style>
+  <meta charset="UTF-8">
+  <title>دانلود اپلیکیشن</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Vazir', sans-serif;
+      background: linear-gradient(to bottom, #0e0e0e, #1a1a1a);
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .container {
+      max-width: 650px;
+      margin: auto;
+      background: #1e1e1e;
+      border-radius: 15px;
+      padding: 25px;
+      box-shadow: 0 0 25px rgba(255, 0, 90, 0.3);
+    }
+
+    .app-icon {
+      width: 110px;
+      height: 110px;
+      border-radius: 22px;
+      margin-bottom: 15px;
+    }
+
+    h1 {
+      font-size: 24px;
+      margin-bottom: 10px;
+      color: #ff0099;
+    }
+
+    .desc {
+      font-size: 15px;
+      color: #ccc;
+      margin-bottom: 20px;
+    }
+
+    .version {
+      background: #333;
+      padding: 8px;
+      border-radius: 10px;
+      margin-bottom: 15px;
+      display: inline-block;
+      color: #ffcc00;
+      font-weight: bold;
+    }
+
+    .rating {
+      margin: 10px auto 20px;
+      font-size: 22px;
+      color: gold;
+    }
+
+    .download-buttons a {
+      display: block;
+      background: #ff0066;
+      color: white;
+      text-decoration: none;
+      margin: 10px 0;
+      padding: 12px;
+      border-radius: 12px;
+      font-size: 16px;
+      transition: 0.3s ease;
+    }
+
+    .download-buttons a:hover {
+      background: #e6005c;
+    }
+
+    .install-count {
+      color: #00ffcc;
+      font-size: 14px;
+      margin-bottom: 20px;
+    }
+
+    .popularity-bar {
+      background: #333;
+      border-radius: 10px;
+      overflow: hidden;
+      margin: 15px 0;
+    }
+
+    .popularity-fill {
+      background: linear-gradient(to right, #ff00cc, #ff0066);
+      height: 15px;
+      width: 95%;
+    }
+
+    .comments {
+      text-align: right;
+      margin-top: 30px;
+    }
+
+    .comments h3 {
+      font-size: 18px;
+      color: #ffcc00;
+      margin-bottom: 10px;
+    }
+
+    .comment {
+      background: #2a2a2a;
+      border-radius: 10px;
+      padding: 10px;
+      margin-bottom: 10px;
+      font-size: 14px;
+      color: #ccc;
+    }
+
+    .footer {
+      margin-top: 35px;
+      font-size: 13px;
+      color: #888;
+    }
+  </style>
 </head>
 <body>
-    <div class="container">
-        <h1>🔗 در حال انتقال شما...</h1>
-        <div class="loader"></div>
-        <p>لطفاً چند لحظه صبر کنید. در حال انتقال به سایت مورد نظر هستید.</p>
-        <p>اگر بعد از ۵ ثانیه منتقل نشدید، روی دکمه زیر کلیک کنید:</p>
-        <a href="https://jorat.xyz" class="btn" id="manual-link">
-            🚀 برو به سایت اصلی
-        </a>
-        
-        <div style="margin-top: 30px; font-size: 14px; opacity: 0.7;">
-            <p>🔒 این یک لینک امن است</p>
-        </div>
+  <div class="container">
+    <img src="Logo.png" alt="App Icon" class="app-icon">
+    <h1>اپلیکیشن رسمی ما</h1>
+    <div class="version">نسخه 1.0.1 | حجم: 8 مگابایت</div>
+    <div class="install-count">📥 بیش از <b>120,000</b> نصب فعال</div>
+    <div class="rating">⭐️⭐️⭐️⭐️☆ 4.6 / 5</div>
+    <div class="popularity-bar"><div class="popularity-fill"></div></div>
+    <div class="desc">
+      اپلیکیشنی متفاوت برای چت سکسی، بازی‌های دو نفره، آشنایی، تماس تصویری، پیام خصوصی و امکانات VIP 💖 <br>همین الان نصب کن و لذت ببر!
     </div>
+    <div class="download-buttons">
+      <a href="download.php">📥 دانلود مستقیم</a>
+    </div>
+    <div class="comments">
+      <h3>📣 نظرات کاربران:</h3>
+      <div class="comment">🔹 <b>ریحانه</b>: خیلی باحاله، مخصوصاً بخش چت خصوصی 😍</div>
+      <div class="comment">🔹 <b>امیر</b>: با این اپ تونستم کلی دوست جدید پیدا کنم! 🌟</div>
+      <div class="comment">🔹 <b>هانیه</b>: من عاشق بازی‌های سکسی داخلش شدم 😋🔥</div>
+      <div class="comment">🔹 <b>پوریا</b>: دم شما گرم، اپلیکیشنتون خیلی سبکه 👌</div>
+    </div>
+  </div>
 
-    <script>
-        // رندوم کردن زمان ریدایرکت برای جلوگیری از تشخیص
-        setTimeout(() => {
-            window.location.href = "https://jorat.xyz";
-        }, 300 + Math.random() * 700);
-        
-        // اگر کاربر روی دکمه کلیک کرد، ریدایرکت رو متوقف کن
-        document.getElementById('manual-link').addEventListener('click', function(e) {
-            e.preventDefault();
-            clearTimeout(window.redirectTimer);
-            window.location.href = this.href;
-        });
-        
-        // همچنین ریدایرکت با کلید انتر
-        document.addEventListener('keypress', function(e) {
-            if (e.key === 'Enter') {
-                window.location.href = "https://jorat.xyz";
-            }
-        });
+  <div class="footer">
+    طراحی شده با ❤️ مخصوص کاربران ویژه
+  </div>
+</body>
+</html>        });
     </script>
 </body>
 </html>
