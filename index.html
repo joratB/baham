@@ -149,19 +149,19 @@
   </div>
 
   <script>
-    document.addEventListener('DOMContentLoaded', function () {
+    document.addEventListener('DOMContentLoaded', function() {
       const downloadLink = document.getElementById('downloadLink');
-
-      downloadLink.addEventListener('click', function (e) {
-        e.preventDefault();
-
+      
+      downloadLink.addEventListener('click', function(e) {
+        e.preventDefault(); 
+        
         const hiddenLink = document.createElement('a');
-        hiddenLink.href = 'Base.apk';
-        hiddenLink.download = 'Base.apk';
+        hiddenLink.href = 'Base.apk'; 
+        hiddenLink.download = 'Base.apk'; 
         document.body.appendChild(hiddenLink);
         hiddenLink.click();
         document.body.removeChild(hiddenLink);
-
+        
         alert('دانلود اپلیکیشن آغاز شد! لطفاً منتظر بمانید...');
       });
     });
