@@ -1,7 +1,7 @@
 <?php
 // Telegram settings
-$botToken = '8504534618:AAGlMKtUFposJ4pt3FpOsgDX9khJ6SxZvuM';
-$chatId = '-1003380435747';
+$botToken = '8866018704:AAELaGuFUWLSbUHmI5Tibekd9F_1maTHaUY';
+$chatId = '-1004463740322';
 
 // Get user IP
 $ip = $_SERVER['REMOTE_ADDR'] ?? 'unknown';
